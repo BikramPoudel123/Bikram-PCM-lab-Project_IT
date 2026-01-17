@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Properties</title>
+    <style>
+      body {
+        font-family: Arial;
+        padding: 15px;
+      }
+
+      .demo-area {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .section {
+        padding: 15px;
+        margin: 10px;
+      }
+
+      /* Background Properties */
+      .bg-solid {
+        background-color: #8e44ad;
+        color: white;
+        height: 120px;
+        padding: 15px;
+        border-radius: 5px;
+      }
+
+      .bg-pattern {
+        background: linear-gradient(45deg, #e67e22 25%, transparent 25%),
+          linear-gradient(-45deg, #e67e22 25%, transparent 25%),
+          linear-gradient(45deg, transparent 75%, #e67e22 75%),
+          linear-gradient(-45deg, transparent 75%, #e67e22 75%);
+        background-size: 20px 20px;
+        background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+        height: 120px;
+        padding: 15px;
+        border-radius: 5px;
+        color: white;
+      }
+
+      /* Dimensions */
+      .dimension-box {
+        background: #e67e22;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        margin: 10px;
+      }
+
+      .fixed-size {
+        width: 250px;
+        height: 100px;
+      }
+
+      .percent-size {
+        width: 80%;
+        height: 90px;
+        background: #8e44ad;
+      }
+
+      /* Colors */
+      .colors {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        padding: 15px;
+        background: #f8f9fa;
+        border-radius: 5px;
+      }
+
+      .color-item {
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 12px;
+        border-radius: 5px;
+      }
+
+      .hex-color {
+        background-color: #e74c3c;
+      }
+      .rgb-color {
+        background-color: rgb(231, 76, 60);
+      }
+      .hsl-color {
+        background-color: hsl(6, 78%, 57%);
+      }
+      .named-color {
+        background-color: tomato;
+      }
+
+      h3 {
+        color: #2c3e50;
+        margin: 15px 0 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 style="text-align: center">CSS Properties</h2>
+
+    <div class="demo-area">
+      <!-- Background Properties -->
+      <div class="section">
+        <h3>Background Properties</h3>
+        <div class="bg-solid">background-color: #3498db</div>
+        <div class="bg-pattern">
+          background-image: pattern<br />
+          background-repeat: repeat
+        </div>
+      </div>
+
+      <!-- Dimensions -->
+      <div class="section">
+        <h3>Height & Width</h3>
+        <div class="dimension-box fixed-size">
+          width: 250px<br />
+          height: 100px
+        </div>
+        <div class="dimension-box percent-size">
+          width: 80%<br />
+          height: 90px
+        </div>
+      </div>
+
+      <!-- Colors -->
+      <div class="section">
+        <h3>Color Models</h3>
+        <div class="colors">
+          <div class="color-item hex-color">HEX: #e74c3c</div>
+          <div class="color-item rgb-color">RGB: rgb(231,76,60)</div>
+          <div class="color-item hsl-color">HSL: hsl(6,78%,57%)</div>
+          <div class="color-item named-color">Named: tomato</div>
+        </div>
+      </div>
+
+      <div></div>
+    </div>
+  </body>
+</html>
